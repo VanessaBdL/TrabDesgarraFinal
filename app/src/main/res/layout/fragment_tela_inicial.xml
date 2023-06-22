@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/inicial"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TelaInicialFragment"
+        android:background="@drawable/inicial">
+
+        <Button
+            android:id="@+id/iniciarcadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:background="@drawable/borda_botoes"
+            android:backgroundTint="#000000"
+            android:text="Iniciar cadastro"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/japossuicadastro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/japossuicadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/borda_botoes"
+            android:backgroundTint="#000000"
+            android:text="Já possui cadastro?"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/sair"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iniciarcadastro" />
+
+        <Button
+            android:id="@+id/sair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="150dp"
+            android:text="Sair"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#000000"
+            android:background="@drawable/borda_botoes"
+            app:iconTintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/japossuicadastro" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

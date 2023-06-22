@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/regvendfim"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:context=".RegistroInicioFragment">
+
+        <ImageButton
+            android:id="@+id/voltar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="180dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_8"
+            app:layout_constraintBottom_toTopOf="@id/editTextRG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editTextRG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/editTextCPF"
+            app:layout_constraintTop_toBottomOf="@+id/voltar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="20dp"
+            android:textColorHint="@color/black"
+            android:textColor="#000000"
+            android:hint="RG"
+            android:background="@drawable/edit_text_border" />
+
+        <EditText
+            android:id="@+id/editTextCPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPIX"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextRG"
+            android:layout_marginBottom="20dp"
+            android:gravity="start"
+            android:textColorHint="@color/black"
+            android:textColor="#000000"
+            android:hint="CPF"
+            android:background="@drawable/edit_text_border" />
+
+        <EditText
+            android:id="@+id/editTextPIX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/anexar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCPF"
+            android:layout_marginBottom="20dp"
+            android:gravity="start"
+            android:textColorHint="@color/black"
+            android:textColor="#000000"
+            android:hint="Chave PIX"
+            android:background="@drawable/edit_text_border" />
+
+        <Button
+            android:id="@+id/anexar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:text="Anexar Imagem da Identidade"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/continuar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPIX" />
+
+        <Button
+            android:id="@+id/continuar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:text="Continuar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anexar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

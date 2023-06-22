@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="menu.FeedFragment">
+
+    <LinearLayout
+        android:layout_gravity="top"
+        android:gravity="start"
+        android:id="@+id/Cima"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/borda_barra"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/Meio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_marginBottom="10dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_9"/>
+
+        <ImageButton
+            android:id="@+id/upgrade"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:backgroundTint="#00FFFFFF"
+            android:layout_margin="190dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_11"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Meio"
+        android:layout_width="375dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="@drawable/borda_postagem"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewNomeUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/borda_botoes"
+            android:text="Pelúcias Disponíveis para Troca/Compra/Doação"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/scrollViewPelucias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPelucia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:id="@+id/Baixo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/borda_barra"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Meio">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_12" />
+
+        <ImageButton
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_13" />
+
+        <ImageButton
+            android:id="@+id/perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_14"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

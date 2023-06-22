@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/editar_pelucia"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            tools:context=".AdicionarInicioPeluciaFragment">
+
+            <ImageButton
+                android:id="@+id/voltar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="80dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_8"
+                app:layout_constraintBottom_toTopOf="@id/textViewEditarPelucia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewEditarPelucia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Editar Pelúcia"
+                android:textColor="#000000"
+                android:textIsSelectable="false"
+                android:textSize="48sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/editTextNome"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/voltar" />
+
+            <TextView
+                android:id="@+id/editTextNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="Nome"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/editTextDescricao"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEditarPelucia" />
+
+            <TextView
+                android:id="@+id/editTextDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="start"
+                android:hint="Descrição"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/editTextPreco"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+
+
+            <TextView
+                android:id="@+id/editTextPreco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="Preço"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/editTextCor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDescricao" />
+
+            <TextView
+                android:id="@+id/editTextCor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="Cor"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/editTextTamanho"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPreco" />
+
+            <TextView
+                android:id="@+id/editTextTamanho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="Tamanho"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/editTextData"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCor" />
+
+            <TextView
+                android:id="@+id/editTextData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="start"
+                android:hint="Data de aquisição"
+                android:inputType="date"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/editTextVendedor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTamanho" />
+
+            <TextView
+                android:id="@+id/editTextVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="start"
+                android:hint="Nome do Vendedor"
+                android:inputType="date"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/LinearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/Comprar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextVendedor">
+
+                <CheckBox
+                    android:id="@+id/checkBoxTrocar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="#070707"
+                    android:hint="Troco"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBoxVender" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxVender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="#000000"
+                    android:hint="Vendo"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBoxDoar"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxTrocar" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxDoar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="#000000"
+                    android:hint="Doo"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/anexarImagem"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxVender" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/Comprar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/borda_botoes"
+                android:backgroundTint="#000000"
+                android:text="Comprar"
+                app:layout_constraintBottom_toTopOf="@+id/Trocar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LinearLayout" />
+
+            <Button
+                android:id="@+id/Trocar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/borda_botoes"
+                android:backgroundTint="#000000"
+                android:text="Trocar"
+                app:layout_constraintBottom_toTopOf="@+id/Doacao"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Comprar" />
+
+            <Button
+                android:id="@+id/Doacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borda_botoes"
+                android:backgroundTint="#000000"
+                android:text="Receber Doação"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Trocar" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

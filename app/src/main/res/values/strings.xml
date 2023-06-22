@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Desgarra</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="dialog_excluir_usuario">Deseja realmente excluir sua conta?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+</resources>

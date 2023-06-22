@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/editar_pelucia_fim"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:context=".RegistroInicioFragment">
+
+        <ImageButton
+            android:id="@+id/voltar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="180dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_8"
+            app:layout_constraintBottom_toTopOf="@id/editTextTamanho"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editTextTamanho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/editTextData"
+            app:layout_constraintTop_toBottomOf="@+id/voltar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="20dp"
+            android:textColorHint="@color/black"
+            android:textColor="#000000"
+            android:hint="Tamanho"
+            android:background="@drawable/edit_text_border" />
+
+        <EditText
+            android:id="@+id/editTextData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            app:layout_constraintBottom_toTopOf="@+id/LinearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTamanho"
+            android:layout_marginBottom="20dp"
+            android:gravity="start"
+            android:textColorHint="@color/black"
+            android:textColor="#000000"
+            android:hint="Data de aquisição"
+            android:background="@drawable/edit_text_border" />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:background="@drawable/edit_text_border"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextData"
+            app:layout_constraintBottom_toTopOf="@+id/anexar">
+
+            <CheckBox
+                android:id="@+id/checkBoxTrocar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#070707"
+                android:hint="Trocar"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/checkBoxVender" />
+
+            <CheckBox
+                android:id="@+id/checkBoxVender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#000000"
+                android:hint="Vender"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/checkBoxDoar"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxTrocar" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDoar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#000000"
+                android:hint="Doar"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/anexarImagem"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxVender" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/anexar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:background="@drawable/borda_botoes"
+            android:text="Anexar Imagem"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/continuar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LinearLayout" />
+
+        <Button
+            android:id="@+id/continuar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:background="@drawable/borda_botoes"
+            android:text="Continuar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anexar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
